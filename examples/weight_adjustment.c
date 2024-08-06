@@ -39,9 +39,16 @@ int main() {
   // y = x*w;
   float w = rand_float() * 10.0f;
   float eps = 1e-3;
+  float rate = 1e-3;
+
+  // We might calculate the derivative and then operate with that
+  // That's literally the definition of Derivative!
+  float dcost = (loss_function(w + eps) - loss_function(w)) / eps;
 
   printf("%f\n", loss_function(w));
-  printf("%f\n", loss_function(w + eps));
+  // w -= dcost;
+  w -= rate * dcost;
+  printf("%f\n", loss_function(w));
 
   return 0;
 }
