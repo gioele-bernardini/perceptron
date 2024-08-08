@@ -23,6 +23,7 @@ int main() {
 
   // y = x*w;
   float w = rand_float() * 10.0f;
+  
 
   float eps = 1e-3;
 

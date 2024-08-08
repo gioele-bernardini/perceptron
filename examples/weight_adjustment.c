@@ -37,12 +37,16 @@ int main() {
   srand(42);
 
   // y = x*w;
+  // The starting point is critical (local minimum!)
   float w = rand_float() * 10.0f;
+
   float eps = 1e-3;
   float rate = 1e-3;
 
   // We might calculate the derivative and then operate with that
   // That's literally the definition of Derivative!
+  // Maybe we could repeat this process several times
+  // to make the error decrease step by step?
   float dcost = (loss_function(w + eps) - loss_function(w)) / eps;
 
   printf("%f\n", loss_function(w));
