@@ -1,16 +1,25 @@
+// gcc {filename} -lm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 #define train_count (sizeof(train) / sizeof(train[0]))
 
 // Training set: input values (x1, x2) and the corresponding target output
+// OR-gate
 float train[][3] = {
   {0, 0, 0},
   {1, 0, 1},
   {0, 1, 1},
   {1, 1, 0},
 };
+
+// An activation function to "squeeze" the raw value of the neuron
+float sigmoid(float x) {
+  return 1.f / (1.f + expf(-x));
+}
 
 // Function to calculate the cost (mean squared error)
 float cost(float w1, float w2) {
@@ -23,6 +32,8 @@ float cost(float w1, float w2) {
 
     // Compute the predicted output based on current weights
     float y = x1 * w1 + x2 * w2;
+    // Later we'll be using the activation function here
+    // float y = sigmoidf(x1*w1 + x2*w2);
 
     // Calculate the difference (error) between the predicted and actual output
     float d = y - train[i][2];
