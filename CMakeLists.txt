@@ -1,26 +1,25 @@
 cmake_minimum_required(VERSION 3.0)
-project(mnist)
+project(mnist C)
 
-# Set the C++ standard
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Set the C standard
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Include directories
 include_directories(include)
 
 # Add the library
 add_library(mnist-lib
-  
+  src/mnist.c
 )
 
 # Add the executable
 add_executable(mnist
-  src/main.cpp
+  src/main.c
 )
 
 # Link the executable with the library
-# Tell to link the library with the executable
-target_link_libraries(essential-MLP essential-MLP-lib)
+target_link_libraries(mnist mnist-lib)
 
 # Enable testing
 enable_testing()
