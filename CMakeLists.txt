@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(mnist C)
+project(mnist-c)
 
 # Set the C standard
 set(CMAKE_C_STANDARD 11)
@@ -10,7 +10,7 @@ include_directories(include)
 
 # Add the library
 add_library(mnist-lib
-  src/mnist.c
+  src/mnist_dataset.c
 )
 
 # Add the executable
