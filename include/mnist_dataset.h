@@ -1,4 +1,4 @@
-// Inclusion Guards
+// Include Guard
 #ifndef MNIST_FILE_H_
 #define MNIST_FILE_H_
 
@@ -11,7 +11,9 @@
 // Image dimensions in the MNIST dataset
 #define MNIST_IMAGE_WIDTH 28
 #define MNIST_IMAGE_HEIGHT 28
-#define MNIST_IMAGE_SIZE (MNIST_IMAGE_WIDTH * MNIST_IMAGE_HEIGHT)  // Total number of pixels in an image
+
+// Total number of pixels in an image
+#define MNIST_IMAGE_SIZE (MNIST_IMAGE_WIDTH * MNIST_IMAGE_HEIGHT)
 
 // Number of unique labels in MNIST (digits 0-9)
 #define MNIST_LABELS 10
