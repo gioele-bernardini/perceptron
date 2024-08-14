@@ -1,3 +1,4 @@
+// Inclusion Guards
 #ifndef MNIST_FILE_H_
 #define MNIST_FILE_H_
 
