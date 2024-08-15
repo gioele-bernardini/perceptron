@@ -196,8 +196,8 @@ void mnist_free_dataset(mnist_dataset_t *dataset) {
 /**
  * Fills the batch dataset with a subset of the parent dataset.
  */
-int mnist_batch(mnist_dataset_t *dataset, mnist_dataset_t *batch, int size,
-                int number) {
+int mnist_batch(mnist_dataset_t *dataset, mnist_dataset_t *batch, 
+                int size, int number) {
   int start_offset;
 
   start_offset = size * number;
@@ -216,3 +216,4 @@ int mnist_batch(mnist_dataset_t *dataset, mnist_dataset_t *batch, int size,
 
   return 1;
 }
+
