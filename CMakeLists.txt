@@ -11,6 +11,7 @@ include_directories(include)
 # Add the library
 add_library(mnist-lib
   src/mnist_dataset.c
+  src/neural_network.c
 )
 
 # Add the executable
@@ -18,8 +19,9 @@ add_executable(mnist
   src/main.c
 )
 
-# Link the executable with the library
-target_link_libraries(mnist mnist-lib)
+# Link the executable with the library and the math library
+target_link_libraries(mnist mnist-lib m)
+target_link_libraries(mnist-lib m)
 
 # Enable testing
 enable_testing()
