@@ -1,7 +1,3 @@
-Sure! Here's the revised translation with bold text for technical terms:
-
----
-
 Today, the **ReLU (Rectified Linear Unit)** activation function is preferred over the **sigmoid** in many neural network architectures, especially in **deep learning**, for several practical and theoretical reasons. Here are the main reasons:
 
 1. **Vanishing Gradient Problem**
