@@ -74,7 +74,7 @@ void neural_network_hypothesis(mnist_image_t *image, neural_network_t *network,
  * Update the gradients for this step of gradient descent using the gradient
  * contributions from a single training example (image).
  *
- * This function returns the loss ontribution from this training example.
+ * This function returns the loss contribution from this training example.
  */
 float neural_network_gradient_update(mnist_image_t *image,
                                      neural_network_t *network,

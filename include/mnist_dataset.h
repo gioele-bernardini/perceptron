@@ -58,3 +58,4 @@ int mnist_batch(mnist_dataset_t *dataset, mnist_dataset_t *batch,
                 int batch_size, int batch_number);
 
 #endif // MNIST_FILE_H_
+
